@@ -73,7 +73,7 @@ function randomize(rng, { logic }) {
 
 	// attach an item randomly to an actor
 	const itemKeys = [ 'HOLY_WATER', 'WHITE_CRYSTAL', 'BLUE_CRYSTAL', 'RED_CRYSTAL', 'OAK_STAKE', 'HEART',
-		'LAURELS', 'GARLIC', 'NAIL', 'DIAMOND', 'MAGIC_CROSS' ];
+		'LAURELS', 'GARLIC', 'NAIL', 'DIAMOND', 'MAGIC_CROSS', 'THORN_WHIP' ];
 	const baseFuncs = {};
 	itemKeys.forEach(ik => {
 		baseFuncs[ik] = `base.${ik} = function ${ik}() { return true; };`;
@@ -94,7 +94,7 @@ function randomize(rng, { logic }) {
 		let funcCode = `
 // generate logic functions with "visited" checks to prevent infinite loop
 const base = {};
-const items = [ 'HOLY_WATER', 'WHITE_CRYSTAL', 'BLUE_CRYSTAL', 'RED_CRYSTAL', 'OAK_STAKE', 'LAURELS', 'NAIL', 'HEART', 'GARLIC', 'DIAMOND', 'MAGIC_CROSS' ];
+const items = [ 'HOLY_WATER', 'WHITE_CRYSTAL', 'BLUE_CRYSTAL', 'RED_CRYSTAL', 'OAK_STAKE', 'LAURELS', 'NAIL', 'HEART', 'GARLIC', 'DIAMOND', 'MAGIC_CROSS', 'THORN_WHIP' ];
 const funcs = {};
 items.forEach(item => {
 	funcs[item] = function(v) {
